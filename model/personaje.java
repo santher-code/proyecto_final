@@ -32,7 +32,7 @@ public abstract class Personaje {
         this.vida = vida;
     }
 
-    public void setDaño(int dano) {
+    public void setDano(int dano) {
         if (dano < 0) return;    // daño nunca negativo
         this.dano = dano;
     }
@@ -43,7 +43,7 @@ public abstract class Personaje {
         if (this.exp >= 100) {   // sube de nivel
             this.nivel++;
             this.vida  += 15;
-            this.daño  += 20;
+            this.dano  += 20;
             this.exp    = 0;     // resetea experiencia
         }
     }
