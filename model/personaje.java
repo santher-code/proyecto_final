@@ -5,15 +5,17 @@ public abstract class Personaje {
     private int vida;
     private int exp;
     private int nivel;
-    private int daño;
+    private int dano;
+    private String rol;
 
     // ── CONSTRUCTOR ──
-    public Personaje(String nombre, int vida, int daño) {
+    public Personaje(String nombre, int vida, int dano,String rol) {
         this.nombre = nombre;
         this.vida   = vida;
         this.exp    = 0;   // siempre arranca en 0
         this.nivel  = 1;   // siempre arranca en 1
-        this.daño   = daño;
+        this.dano   = dano;
+        this.rol =rol;
     }
 
     // ── GETTERS ──
@@ -21,7 +23,8 @@ public abstract class Personaje {
     public int getVida()      { return vida;   }
     public int getExp()       { return exp;    }
     public int getNivel()     { return nivel;  }
-    public int getDaño()      { return daño;   }
+    public int getDano()      { return dano;   }
+    public String getRol() { return rol; }
 
     // ── SETTERS con validación ──
     public void setVida(int vida) {
@@ -29,9 +32,9 @@ public abstract class Personaje {
         this.vida = vida;
     }
 
-    public void setDaño(int daño) {
-        if (daño < 0) return;    // daño nunca negativo
-        this.daño = daño;
+    public void setDaño(int dano) {
+        if (dano < 0) return;    // daño nunca negativo
+        this.dano = dano;
     }
 
     // ── LÓGICA DE EXPERIENCIA ──
