@@ -10,7 +10,7 @@ public class Conexion {
     // Datos de conexión — ajusta el PASSWORD al tuyo
     private static final String URL      = "jdbc:mysql://localhost:3306/bd_multi";
     private static final String USUARIO  = "root";
-    private static final String PASSWORD = "tuContraseña";
+    private static final String PASSWORD = "123456";
 
     private Connection conexion;
 
