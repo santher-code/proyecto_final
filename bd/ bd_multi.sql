@@ -1,13 +1,21 @@
-create database bd_multi;
-use bd_multi;
+CREATE DATABASE bd_multi;
+USE bd_multi;
 
-create table personaje (
-id_personaje int not null primary key auto increment,
-nombre varchar(20) not null,
-rol varchar(10) not null,
-nivel smallint not null,
-vida smallint not null , 
-daño smallint not null 
+CREATE TABLE personaje (
+    id_personaje INT          NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre       VARCHAR(20)  NOT NULL,
+    rol          VARCHAR(10)  NOT NULL,
+    nivel        SMALLINT     NOT NULL DEFAULT 1,   
+    vida         SMALLINT     NOT NULL,
+    daño         SMALLINT     NOT NULL,
+    exp          SMALLINT     NOT NULL DEFAULT 0   
 );
+
+-- Datos de prueba para la demo del parcial
+INSERT INTO personaje (nombre, rol, nivel, vida, daño, exp) VALUES
+('Carlos',     'Guerrero', 1, 120, 25, 0),
+('Ana',        'Mago',     1,  80, 35, 0),
+('Luis',       'Arquero',  1, 100, 20, 0);
+
 
 
