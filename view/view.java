@@ -2,26 +2,24 @@ package view;
 
 import java.util.Scanner;
 
-// VISTA — solo muestra y recibe datos del usuario
-// nunca toca la base de datos ni modifica el modelo
 public class Vista {
 
-    // Scanner = el oído de Java, escucha al usuario
     private Scanner scanner = new Scanner(System.in);
 
-    // Muestra el menú y devuelve la opción al Controller
+    // menú actualizado con todas las opciones
     public int mostrarMenu() {
         System.out.println("\n====== RPG MANAGER ======");
         System.out.println("1. Crear personaje");
-        System.out.println("2. Buscar personaje");
-        System.out.println("3. Eliminar personaje");
-        System.out.println("4. Combate simulado");
+        System.out.println("2. Listar todos los personajes");
+        System.out.println("3. Buscar personaje por nombre");
+        System.out.println("4. Actualizar nivel");
+        System.out.println("5. Eliminar personaje");
+        System.out.println("6. Combate simulado");
         System.out.println("0. Salir");
         System.out.print("Elige una opción: ");
-        return scanner.nextInt();  // devuelve el número al Controller
+        return scanner.nextInt();
     }
 
-    // Pide el rol y devuelve la opción
     public int pedirRol() {
         System.out.println("Elige tu rol:");
         System.out.println("1. Guerrero (vida: 120, daño: 25)");
@@ -31,20 +29,17 @@ public class Vista {
         return scanner.nextInt();
     }
 
-    // Pide el nombre y lo devuelve
     public String pedirNombre() {
         System.out.print("Digite el nombre del personaje: ");
-        scanner.nextLine(); // limpia el buffer del scanner
+        scanner.nextLine();
         return scanner.nextLine();
     }
 
-    // Pide el ID y lo devuelve
     public int pedirId() {
         System.out.print("Digite el ID del personaje: ");
         return scanner.nextInt();
     }
 
-    // Muestra cualquier mensaje
     public void mostrarMensaje(String mensaje) {
         System.out.println(mensaje);
     }
